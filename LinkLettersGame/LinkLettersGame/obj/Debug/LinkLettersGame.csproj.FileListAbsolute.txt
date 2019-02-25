@@ -1,0 +1,15 @@
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\bin\Debug\LinkLettersGame.exe.config
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\bin\Debug\LinkLettersGame.exe
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\bin\Debug\LinkLettersGame.pdb
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csprojAssemblyReference.cache
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\MainWindow.g.cs
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\App.g.cs
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame_MarkupCompile.cache
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame_MarkupCompile.lref
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\MainWindow.baml
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.g.resources
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.Properties.Resources.resources
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csproj.GenerateResource.cache
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csproj.CoreCompileInputs.cache
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.exe
+C:\Users\Tech-W70a\source\repos\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.pdb
