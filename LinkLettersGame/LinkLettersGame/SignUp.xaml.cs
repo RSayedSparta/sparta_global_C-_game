@@ -19,6 +19,7 @@ namespace LinkLettersGame
     /// </summary>
     public partial class SignUp : Window
     {
+        Player newPlayer;
         public SignUp()
         {
             InitializeComponent();
@@ -33,13 +34,27 @@ namespace LinkLettersGame
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            LogIn li = new LogIn();
-            this.Close();
+            string un = checkPassword();
+            string pass = checkPassword();
+            string path = "";
+
+            if (un != "" && pass != "" && path != "")
+            {
+                newPlayer = new Player(un, pass, path);
+                newPlayer.saveData();
+                LogIn li = new LogIn();
+                this.Close();
+            }
+            
         }
 
         public string checkPassword()
         {
             string password = "";
+            if(passSignup == repassSignup)
+            {
+                password = passSignup.Text;
+            }
 
             return password;
         }
@@ -47,10 +62,11 @@ namespace LinkLettersGame
         public string checkUsername()
         {
             string username = "";
+            
 
             return username;
         }
-
+        
 
     }
 }
