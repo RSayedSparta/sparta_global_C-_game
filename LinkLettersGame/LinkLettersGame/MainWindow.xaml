@@ -25,6 +25,7 @@
         <Button x:Name="btnT" Content="T" HorizontalAlignment="Left" Margin="532,488,0,0" VerticalAlignment="Top" Width="58" Height="54" Click="BtnT_Click" FontSize="20"/>
         <Label x:Name="inputLable" Content="" HorizontalAlignment="Left" Margin="226,398,0,0" VerticalAlignment="Top" Height="47" Width="397" FontWeight="Bold" FontSize="20" Background="Red"/>
         <Button x:Name="clearBtn" Content="Clear" HorizontalAlignment="Left" Margin="667,431,0,0" VerticalAlignment="Top" Width="83" Height="36" FontSize="18" Click="ClearBtn_Click"/>
+        <Label x:Name="timerLabel" Content="Timer : " HorizontalAlignment="Left" Margin="613,591,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

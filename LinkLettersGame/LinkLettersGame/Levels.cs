@@ -16,5 +16,7 @@ namespace LinkLettersGame
         void removeWord();
 
         void clearAll();
+
+        void timer();
     }
 }

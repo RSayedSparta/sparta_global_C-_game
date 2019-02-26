@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,10 +51,14 @@ namespace LinkLettersGame
 
         public string checkPassword()
         {
-            string password = "";
-            if(passSignup == repassSignup)
+            string password = passSignup.Password;
+            if(passSignup.Password == repassSignup.Password)
             {
-                password = passSignup.Text;
+                password = passSignup.Password;
+            }
+            else
+            {
+                MessageBox.Show("Please re-enter password correctly");
             }
 
             return password;
@@ -61,12 +66,23 @@ namespace LinkLettersGame
 
         public string checkUsername()
         {
-            string username = "";
+            string username = userSignup.Text;
+            string[] sr = File.ReadAllLines("UserData.txt");
+            for (int i = 0; i < sr.Length; i++)
+            {
+                string[] str = sr[i].Split(',');
+                if (username == str[0])
+                {
+                    username = "";
+                }
+            }
             
-
             return username;
         }
-        
 
+        private void UserSignup_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

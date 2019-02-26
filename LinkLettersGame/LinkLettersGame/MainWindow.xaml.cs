@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,14 +13,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
+using System.Windows.Threading;
 
 namespace LinkLettersGame
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window, ILevel, IEasy
     {
+        System.Windows.Threading.DispatcherTimer dispatcherTimer;
         List<string> words = new List<string>();
         string playerInput = "";
         public MainWindow()
@@ -28,15 +33,17 @@ namespace LinkLettersGame
             words.Add("not");
             words.Add("nut");
             words.Add("unto");
-            words.Add("ton");
             words.Add("out");
+            words.Add("ton");
+            
+            timer();
         }
 
         public void selectLetter(RoutedEventArgs e)
         {
             if (playerInput.Length < 5)
             {
-                Button letter = (Button)e.Source;
+                System.Windows.Controls.Button letter = (System.Windows.Controls.Button)e.Source;
                 inputLable.Content += letter.Content.ToString();
                 playerInput += letter.Content.ToString();
                 checkWord();
@@ -50,29 +57,25 @@ namespace LinkLettersGame
         private void BtnT_Click(object sender, RoutedEventArgs e)
         {
             selectLetter(e);
-            if (playerInput.ToLower() == "t")
-            {
-                btnT.IsEnabled = false;
-            }
-            else
-            {
-                btnT.IsEnabled = true;
-            }
+ 
         }
 
         private void BtnO_Click(object sender, RoutedEventArgs e)
         {
             selectLetter(e);
+
         }
 
         private void BtnU_Click(object sender, RoutedEventArgs e)
         {
             selectLetter(e);
+
         }
 
         private void BtnN_Click(object sender, RoutedEventArgs e)
         {
             selectLetter(e);
+
         }
 
         private void ClearBtn_Click(object sender, RoutedEventArgs e)
@@ -106,32 +109,46 @@ namespace LinkLettersGame
                     break;
                 default:
                     break;
-            }
 
-            if (words[0] == "")
+            }
+            if (words.Count == 0)
             {
-
+                gameOver();
             }
-
         }
 
         public void removeWord()
         {
-            foreach (var item in words)
+            for (int i = 0; i < words.Count; i++)
             {
-                if (item == playerInput.ToLower())
+                if (words[i] == playerInput.ToLower())
                 {
-                    words.Remove(item);
+                    words.RemoveAt(i);
                     clearAll();
                 }
-                break;
+                
             }
+                    
+                
+
         }
 
         public void timer()
         {
-
+            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0,0,1);
+            dispatcherTimer.Start();
         }
+
+         public void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            timerLabel.Content = DateTime.Now.Second;
+            CommandManager.InvalidateRequerySuggested();
+                
+        }
+
+
 
         public void displayNot()
         {
@@ -173,6 +190,12 @@ namespace LinkLettersGame
         {
             inputLable.Content = "";
             playerInput = "";
+        }
+
+        public void gameOver()
+        {
+            dispatcherTimer.Stop();
+            System.Windows.MessageBox.Show("Game Over " + "\n" + "");
         }
     }
 }
