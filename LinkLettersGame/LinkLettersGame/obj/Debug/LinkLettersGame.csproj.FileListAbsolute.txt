@@ -28,3 +28,15 @@ C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\Lin
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csproj.CoreCompileInputs.cache
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.exe
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.pdb
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Hard.g.cs
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Home.g.cs
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LeaderPage.g.cs
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LogIn.g.cs
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Medium.g.cs
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\SignUp.g.cs
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Hard.baml
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Home.baml
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LeaderPage.baml
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LogIn.baml
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Medium.baml
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\SignUp.baml
