@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LinkLettersGame"
         mc:Ignorable="d"
-        Title="Link Letters" Height="687.609" Width="832.004">
+        Title="Link Letters" Height="687.609" Width="832.004" Loaded="Window_Loaded">
     <Grid Margin="0,0,3.4,-0.6">
         <Label Name ="outU" Foreground="Transparent" Content="U" HorizontalAlignment="Left" Margin="504,233,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red"  ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
         <Label Name ="ton_outO" Foreground="Transparent" Content="O" HorizontalAlignment="Left" Margin="395,233,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>

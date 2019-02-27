@@ -20,8 +20,7 @@ namespace LinkLettersGame
     /// </summary>
     public partial class LogIn : Window
     {
-        Player pl;
-        int indexUser;
+        int indexUser = 0;
         public LogIn()
         {
             InitializeComponent();

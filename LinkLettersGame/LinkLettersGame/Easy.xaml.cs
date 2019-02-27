@@ -25,10 +25,11 @@ namespace LinkLettersGame
     
     public partial class EasyLvl : Window, ILevel, IEasy
     {
-        System.Windows.Threading.DispatcherTimer dispatcherTimer;
         List<string> words = new List<string>();
         string playerInput = "";
         string[] usersIndex;
+        int seconds = -1;
+        DispatcherTimer dispatcherTimer;
         public EasyLvl(int indexUser)
         {
             InitializeComponent();
@@ -37,9 +38,11 @@ namespace LinkLettersGame
             words.Add("unto");
             words.Add("out");
             words.Add("ton");
+            
             string[] sr = File.ReadAllLines("PlayerData.txt");
             usersIndex = sr[indexUser].Split(',');
-            timer();
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Start();
         }
 
         public void selectLetter(RoutedEventArgs e)
@@ -138,19 +141,20 @@ namespace LinkLettersGame
                     
         }
 
-        public void timer()
+
+        public void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Interval = TimeSpan.FromSeconds(1);
             dispatcherTimer.Tick += dispatcherTimer_Tick;
-            dispatcherTimer.Interval = new TimeSpan(0,0,1);
-            dispatcherTimer.Start();
+            
+
         }
 
-         public void dispatcherTimer_Tick(object sender, EventArgs e)
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            timerLabel.Content = DateTime.Now.Second;
-            CommandManager.InvalidateRequerySuggested();
-                
+            seconds++;
+            timerLabel.Content = seconds;
+
         }
 
 
@@ -213,6 +217,7 @@ namespace LinkLettersGame
             dispatcherTimer.Stop();
             setPlayerScore();
             System.Windows.MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel.Content.ToString());
+            this.Close();
         }
     }
 }

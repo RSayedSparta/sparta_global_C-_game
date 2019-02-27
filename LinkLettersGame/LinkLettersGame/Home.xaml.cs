@@ -31,10 +31,10 @@ namespace LinkLettersGame
         string[] usersIndex;
         public Home(int indexUser) : this()
         {
-           
             this.indexUser = indexUser;
             usersIndex = sr[indexUser].Split(',');
             avatarPic.Source = new BitmapImage(new Uri(usersIndex[2]));
+            userLable.Content = usersIndex[0];
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -53,6 +53,12 @@ namespace LinkLettersGame
         {
             Hard hr = new Hard(indexUser);
             hr.Show();
+        }
+
+        private void LeaderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            LeaderPage lb = new LeaderPage();
+            lb.Show();
         }
     }
 }

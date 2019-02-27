@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LinkLettersGame"
         mc:Ignorable="d"
-        Title="Medium" Height="450" Width="800">
+        Title="Medium" Height="771.832" Width="1036.652" Loaded="Window_Loaded">
     <Grid>
-        
+        <Button x:Name="btnE" Content="E" HorizontalAlignment="Left" Margin="285,604,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnE_Click" FontSize="20"/>
+        <Button x:Name="btnH" Content="H" HorizontalAlignment="Left" Margin="388,604,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnH_Click" FontSize="20"/>
+        <Button x:Name="btnEE" Content="E" HorizontalAlignment="Left" Margin="489,604,0,0" VerticalAlignment="Top" Width="56" Height="54" Click="BtnEE_Click" FontSize="20"/>
+        <Button x:Name="btnR" Content="R" HorizontalAlignment="Left" Margin="585,604,0,0" VerticalAlignment="Top" Width="58" Height="54" Click="BtnR_Click" FontSize="20"/>
+        <Label x:Name="inputLable" Content="" HorizontalAlignment="Left" Margin="311,514,0,0" VerticalAlignment="Top" Height="47" Width="397" FontWeight="Bold" FontSize="20" Background="Red"/>
+        <Button x:Name="clearBtn" Content="Clear" HorizontalAlignment="Left" Margin="813,525,0,0" VerticalAlignment="Top" Width="83" Height="36" FontSize="18" Click="ClearBtn_Click"/>
+        <Label x:Name="timerLabel" Content="Timer  " HorizontalAlignment="Left" Margin="698,707,0,0" VerticalAlignment="Top"/>
+        <Label Content="Points:" HorizontalAlignment="Left" Margin="219,707,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="displayPoints" Content="" HorizontalAlignment="Left" Margin="269,707,0,0" VerticalAlignment="Top" Width="41"/>
+        <Label x:Name ="theE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="287,356,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="the_herH"  Foreground="Transparent" Content="H" HorizontalAlignment="Left" Margin="287,298,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="theT"  Foreground="Transparent" Content="T" HorizontalAlignment="Left" Margin="287,239,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="herE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="352,298,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="her_treeR"  Foreground="Transparent" Content="R" HorizontalAlignment="Left" Margin="418,298,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="treeE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="418,356,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="treeEE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="418,415,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="tree_threeT"  Foreground="Transparent" Content="T" HorizontalAlignment="Left" Margin="418,239,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="threeH"  Foreground="Transparent" Content="H" HorizontalAlignment="Left" Margin="483,239,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="three_thereR"  Foreground="Transparent" Content="R" HorizontalAlignment="Left" Margin="549,239,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="thereE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="549,298,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="thereEE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="549,181,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="there_theeH"  Foreground="Transparent" Content="H" HorizontalAlignment="Left" Margin="549,122,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="theeT"  Foreground="Transparent" Content="T" HorizontalAlignment="Left" Margin="483,122,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="thereT"  Foreground="Transparent" Content="T" HorizontalAlignment="Left" Margin="549,64,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="theeE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="614,122,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="thee_hereE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="680,122,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="hereH"  Foreground="Transparent" Content="H" HorizontalAlignment="Left" Margin="680,64,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="hereR"  Foreground="Transparent" Content="R" HorizontalAlignment="Left" Margin="680,181,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="here_threeE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="680,239,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Label x:Name ="threeE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="614,239,0,0" VerticalAlignment="Top" Height="53" Width="60" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
+        <Button x:Name="btnT" Content="T" HorizontalAlignment="Left" Margin="687,604,0,0" VerticalAlignment="Top" Width="58" Height="54" Click="BtnT_Click" FontSize="20"/>
     </Grid>
 </Window>

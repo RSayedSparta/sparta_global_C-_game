@@ -17,6 +17,6 @@ namespace LinkLettersGame
 
         void clearAll();
 
-        void timer();
+        void setPlayerScore();
     }
 }

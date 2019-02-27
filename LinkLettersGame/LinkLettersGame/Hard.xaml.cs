@@ -22,10 +22,12 @@ namespace LinkLettersGame
     /// </summary>
     public partial class Hard : Window, ILevel, IHard
     {
-        System.Windows.Threading.DispatcherTimer dispatcherTimer;
+        
         List<string> words = new List<string>();
         string playerInput = "";
+        int seconds = -1;
         string[] usersIndex;
+        DispatcherTimer dispatcherTimer;
         public Hard(int indexUser)
         {
             InitializeComponent();
@@ -43,12 +45,13 @@ namespace LinkLettersGame
             words.Add("curse");
             string[] sr = File.ReadAllLines("PlayerData.txt");
             usersIndex = sr[indexUser].Split(',');
-            timer();
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Start();
         }
 
         public void selectLetter(RoutedEventArgs e)
         {
-            if (playerInput.Length < 5)
+            if (playerInput.Length < 7)
             {
                 System.Windows.Controls.Button letter = (System.Windows.Controls.Button)e.Source;
                 inputLable.Content += letter.Content.ToString();
@@ -243,19 +246,18 @@ namespace LinkLettersGame
             }
         }
 
-        public void timer()
+        public void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Interval = TimeSpan.FromSeconds(1);
             dispatcherTimer.Tick += dispatcherTimer_Tick;
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            dispatcherTimer.Start();
+
+
         }
 
-        public void dispatcherTimer_Tick(object sender, EventArgs e)
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            timerLabel.Content = DateTime.Now.Second;
-            CommandManager.InvalidateRequerySuggested();
-
+            seconds++;
+            timerLabel.Content = seconds;
         }
 
         private void BtnN_Click(object sender, RoutedEventArgs e)
@@ -288,10 +290,20 @@ namespace LinkLettersGame
             selectLetter(e);
         }
 
+        public void setPlayerScore()
+        {
+            usersIndex[3] = "Hard";
+            usersIndex[4] = displayPoints.Content.ToString();
+            usersIndex[5] = timerLabel.Content.ToString();
+            usersIndex[6] += 1;
+            Player pl = new Player(usersIndex[0], usersIndex[1], usersIndex[2], usersIndex[3], int.Parse(usersIndex[4]), int.Parse(usersIndex[5]), int.Parse(usersIndex[6]));
+            pl.saveData();
+        }
+
         public void gameOver()
         {
             dispatcherTimer.Stop();
-            //setPlayerScore();
+            setPlayerScore();
             System.Windows.MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel.Content.ToString());
         }
 

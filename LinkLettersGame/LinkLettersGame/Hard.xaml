@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LinkLettersGame"
         mc:Ignorable="d"
-        Title="Hard" Height="791.6" Width="1103.2">
+        Title="Hard" Height="791.6" Width="1103.2" Loaded="Window_Loaded">
     <Grid>
         <Button x:Name="btnR" Content="R" HorizontalAlignment="Left" Margin="331,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnR_Click" FontSize="20"/>
         <Button x:Name="btnS" Content="S" HorizontalAlignment="Left" Margin="446,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnS_Click" FontSize="20"/>

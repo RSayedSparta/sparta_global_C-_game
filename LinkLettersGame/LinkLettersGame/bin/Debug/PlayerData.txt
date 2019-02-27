@@ -1,3 +1,9 @@
 Rahib,123,C:\\Users\\Tech-W70a\\Pictures\\sparta.png,,0,0,0
 Sayed,123,C:/Users/Tech-W70a/Pictures/sparta.png,,0,0,0
 Sayed,123,C:/Users/Tech-W70a/Pictures/sparta.png,Easy,5,46,1
+Rahib,123,C:\\Users\\Tech-W70a\\Pictures\\sparta.png,Easy,5,77,1
+Rahib,123,C:\\Users\\Tech-W70a\\Pictures\\sparta.png,Easy,5,24,1
+Rahib,123,C:\\Users\\Tech-W70a\\Pictures\\sparta.png,Easy,5,17,1
+Rahib,123,C:\\Users\\Tech-W70a\\Pictures\\sparta.png,Medium,7,50,1
+
+Rahib,123,C:\\Users\\Tech-W70a\\Pictures\\sparta.png,Easy,5,12,1
