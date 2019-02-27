@@ -23,6 +23,7 @@ namespace LinkLettersGame
     {
         Player newPlayer;
         LogIn win = new LogIn();
+        StringBuilder sb;
         public SignUp()
         {
             InitializeComponent();
@@ -36,12 +37,12 @@ namespace LinkLettersGame
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            string un = checkPassword();
+            string un = checkUsername();
             string pass = checkPassword();
-            string path = displayPic.Source.ToString();
-
-            if (un != "" && pass != "" && path != "")
+            if (un != "" && pass != "")
             {
+                sb = new StringBuilder(displayPic.Source.ToString());
+                string path = sb.Remove(0, 8).ToString();
                 newPlayer = new Player(un, pass, path);
                 newPlayer.saveData();
                 MessageBox.Show("You have successfully registered");

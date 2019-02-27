@@ -21,6 +21,17 @@ namespace LinkLettersGame
             picturePath = pp;
         }
 
+        public Player(string n, string p, string pic, string l, int s, int t , int a)
+        {
+            name = n;
+            password = p;
+            picturePath = pic;
+            level = l;
+            score = s;
+            time = t;
+            attempt = a;
+        }
+
         private string name;
         private string password;
         private string picturePath;

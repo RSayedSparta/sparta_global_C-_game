@@ -1,0 +1,3 @@
+Rahib,123,C:\\Users\\Tech-W70a\\Pictures\\sparta.png,,0,0,0
+Sayed,123,C:/Users/Tech-W70a/Pictures/sparta.png,,0,0,0
+Sayed,123,C:/Users/Tech-W70a/Pictures/sparta.png,Easy,5,46,1

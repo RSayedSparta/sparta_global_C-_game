@@ -11,17 +11,293 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Forms;
+using System.Windows.Threading;
+using System.IO;
 
 namespace LinkLettersGame
 {
     /// <summary>
     /// Interaction logic for Hard.xaml
     /// </summary>
-    public partial class Hard : Window
+    public partial class Hard : Window, ILevel, IHard
     {
-        public Hard()
+        System.Windows.Threading.DispatcherTimer dispatcherTimer;
+        List<string> words = new List<string>();
+        string playerInput = "";
+        string[] usersIndex;
+        public Hard(int indexUser)
         {
             InitializeComponent();
+            words.Add("secure");
+            words.Add("see");
+            words.Add("reuse");
+            words.Add("cure");
+            words.Add("seer");
+            words.Add("cue");
+            words.Add("use");
+            words.Add("sure");
+            words.Add("rue");
+            words.Add("rescue");
+            words.Add("user");
+            words.Add("curse");
+            string[] sr = File.ReadAllLines("PlayerData.txt");
+            usersIndex = sr[indexUser].Split(',');
+            timer();
+        }
+
+        public void selectLetter(RoutedEventArgs e)
+        {
+            if (playerInput.Length < 5)
+            {
+                System.Windows.Controls.Button letter = (System.Windows.Controls.Button)e.Source;
+                inputLable.Content += letter.Content.ToString();
+                playerInput += letter.Content.ToString();
+                checkWord();
+            }
+            else
+            {
+                clearAll();
+            }
+        }
+
+        public void checkWord()
+        {
+            switch (playerInput.ToLower())
+            {
+                case "cue":
+                    removeWord();
+                    displayCue();
+                    break;
+                case "cure":
+                    removeWord();
+                    displayCure();
+                    break;
+                case "curse":
+                    removeWord();
+                    displayCurse();
+                    break;
+                case "rescue":
+                    removeWord();
+                    displayRescue();
+                    break;
+                case "reuse":
+                    removeWord();
+                    displayReuse();
+                    break;
+                case "rue":
+                    removeWord();
+                    displayRue();
+                    break;
+                case "secure":
+                    removeWord();
+                    displaySecure();
+                    break;
+                case "see":
+                    removeWord();
+                    displaySee();
+                    break;
+                case "seer":
+                    removeWord();
+                    displaySeer();
+                    break;
+                case "sure":
+                    removeWord();
+                    displaySure();
+                    break;
+                case "use":
+                    removeWord();
+                    displayUse();
+                    break;
+                case "user":
+                    removeWord();
+                    displayUser();
+                    break;
+                default:
+                    break;
+
+            }
+            if (words.Count == 0)
+            {
+                gameOver();
+            }
+        }
+
+        public void clearAll()
+        {
+            inputLable.Content = "";
+            playerInput = "";
+        }
+
+        public void displayCue()
+        {
+            cueC.Foreground = new SolidColorBrush(Colors.Black);
+            cueU.Foreground = new SolidColorBrush(Colors.Black);
+            rescue_cueE.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displayCure()
+        {
+            cureC.Foreground = new SolidColorBrush(Colors.Black);
+            cureR.Foreground = new SolidColorBrush(Colors.Black);
+            cure_seeE.Foreground = new SolidColorBrush(Colors.Black);
+            curse_cureU.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displayCurse()
+        {
+            curseC.Foreground = new SolidColorBrush(Colors.Black);
+            curseE.Foreground = new SolidColorBrush(Colors.Black);
+            curseR.Foreground = new SolidColorBrush(Colors.Black);
+            curse_cureU.Foreground = new SolidColorBrush(Colors.Black);
+            curse_userS.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displayRescue()
+        {
+            rescue_cueE.Foreground = new SolidColorBrush(Colors.Black);
+            rescueU.Foreground = new SolidColorBrush(Colors.Black);
+            rescueC.Foreground = new SolidColorBrush(Colors.Black);
+            rescueE.Foreground = new SolidColorBrush(Colors.Black);
+            sure_rescueR.Foreground = new SolidColorBrush(Colors.Black);
+            reuse_rescueS.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displayReuse()
+        {
+            seer_reuseE.Foreground = new SolidColorBrush(Colors.Black);
+            reuse_rescueS.Foreground = new SolidColorBrush(Colors.Black);
+            reuseU.Foreground = new SolidColorBrush(Colors.Black);
+            reuseR.Foreground = new SolidColorBrush(Colors.Black);
+            reuseE.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displayRue()
+        {
+            rueE.Foreground = new SolidColorBrush(Colors.Black);
+            rue_useU.Foreground = new SolidColorBrush(Colors.Black);
+            user_rueR.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displaySecure()
+        {
+            secureC.Foreground = new SolidColorBrush(Colors.Black);
+            secureE.Foreground = new SolidColorBrush(Colors.Black);
+            secureEE.Foreground = new SolidColorBrush(Colors.Black);
+            secureR.Foreground = new SolidColorBrush(Colors.Black);
+            secureS.Foreground = new SolidColorBrush(Colors.Black);
+            secureU.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displaySee()
+        {
+            seeE.Foreground = new SolidColorBrush(Colors.Black);
+            seeS.Foreground = new SolidColorBrush(Colors.Black);
+            cure_seeE.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displaySeer()
+        {
+            seerE.Foreground = new SolidColorBrush(Colors.Black);
+            seerR.Foreground = new SolidColorBrush(Colors.Black);
+            seer_reuseE.Foreground = new SolidColorBrush(Colors.Black);
+            sure_seerS.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displaySure()
+        {
+            use_sureE.Foreground = new SolidColorBrush(Colors.Black);
+            sure_seerS.Foreground = new SolidColorBrush(Colors.Black);
+            sure_rescueR.Foreground = new SolidColorBrush(Colors.Black);
+            sureU.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displayUse()
+        {
+            use_sureE.Foreground = new SolidColorBrush(Colors.Black);
+            useS.Foreground = new SolidColorBrush(Colors.Black);
+            userU.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        public void displayUser()
+        {
+            user_rueR.Foreground = new SolidColorBrush(Colors.Black);
+            userU.Foreground = new SolidColorBrush(Colors.Black);
+            userE.Foreground = new SolidColorBrush(Colors.Black);
+            curse_userS.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        int points;
+        public void removeWord()
+        {
+            for (int i = 0; i < words.Count; i++)
+            {
+                if (words[i] == playerInput.ToLower())
+                {
+                    words.RemoveAt(i);
+                    points++;
+                    displayPoints.Content = points;
+                    clearAll();
+                }
+
+            }
+        }
+
+        public void timer()
+        {
+            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+        }
+
+        public void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            timerLabel.Content = DateTime.Now.Second;
+            CommandManager.InvalidateRequerySuggested();
+
+        }
+
+        private void BtnN_Click(object sender, RoutedEventArgs e)
+        {
+            selectLetter(e);
+        }
+
+        private void BtnR_Click(object sender, RoutedEventArgs e)
+        {
+            selectLetter(e);
+        }
+
+        private void BtnS_Click(object sender, RoutedEventArgs e)
+        {
+            selectLetter(e);
+        }
+
+        private void BtnU_Click(object sender, RoutedEventArgs e)
+        {
+            selectLetter(e);
+        }
+
+        private void BtnE_Click(object sender, RoutedEventArgs e)
+        {
+            selectLetter(e);
+        }
+
+        private void BtnC_Click(object sender, RoutedEventArgs e)
+        {
+            selectLetter(e);
+        }
+
+        public void gameOver()
+        {
+            dispatcherTimer.Stop();
+            //setPlayerScore();
+            System.Windows.MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel.Content.ToString());
+        }
+
+        private void ClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            clearAll();
         }
     }
 }

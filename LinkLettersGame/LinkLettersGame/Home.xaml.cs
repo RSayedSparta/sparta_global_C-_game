@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,30 +20,39 @@ namespace LinkLettersGame
     /// </summary>
     public partial class Home : Window
     {
-        public Home(LogIn logIn)
+        private int indexUser;
+
+        public Home()
         {
             InitializeComponent();
         }
 
+        string[] sr = File.ReadAllLines("PlayerData.txt");
+        string[] usersIndex;
+        public Home(int indexUser) : this()
+        {
+           
+            this.indexUser = indexUser;
+            usersIndex = sr[indexUser].Split(',');
+            avatarPic.Source = new BitmapImage(new Uri(usersIndex[2]));
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Medium med = new Medium();
+            Medium med = new Medium(indexUser);
             med.Show();
-            this.Close();
         }
 
         private void EasyBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow win = new MainWindow();
+            EasyLvl win = new EasyLvl(indexUser);
             win.Show();
-            this.Close();
         }
 
         private void HardBtn_Click(object sender, RoutedEventArgs e)
         {
-            Hard hr = new Hard();
+            Hard hr = new Hard(indexUser);
             hr.Show();
-            this.Close();
         }
     }
 }

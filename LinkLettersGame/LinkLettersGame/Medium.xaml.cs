@@ -19,7 +19,7 @@ namespace LinkLettersGame
     /// </summary>
     public partial class Medium : Window
     {
-        public Medium()
+        public Medium(int indexUser)
         {
             InitializeComponent();
         }

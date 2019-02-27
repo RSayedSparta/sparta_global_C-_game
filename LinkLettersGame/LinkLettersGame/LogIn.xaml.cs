@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace LinkLettersGame
     public partial class LogIn : Window
     {
         Player pl;
+        int indexUser;
         public LogIn()
         {
             InitializeComponent();
@@ -34,10 +36,18 @@ namespace LinkLettersGame
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-
-            Home hm = new Home(this);
-            hm.Show();
-            this.Close();
+            checkLoginDetails();
+            if (indexUser != -1)
+            {
+                Home hm = new Home(indexUser);
+                hm.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid username and password");
+            }
+            
         }
 
         private void UserLogin_TextChanged(object sender, TextChangedEventArgs e)
@@ -47,7 +57,23 @@ namespace LinkLettersGame
 
         public void checkLoginDetails()
         {
+            string user = userLogin.Text;
+            string[] sr = File.ReadAllLines("PlayerData.txt");
+            for (int i = 0; i < sr.Length; i++)
+            {
+                string[] str = sr[i].Split(',');
+                if (user == str[0])
+                {
+                    indexUser = i;
+                }
+            }
 
+            string[] usersIndex = sr[indexUser].Split(',');
+            if (usersIndex[1] == null)
+            {
+                indexUser = -1;
+            }
+            
         }
     }
 }

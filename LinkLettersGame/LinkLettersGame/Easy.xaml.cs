@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Windows.Threading;
+using System.IO;
 
 namespace LinkLettersGame
 {
@@ -22,12 +23,13 @@ namespace LinkLettersGame
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     
-    public partial class MainWindow : Window, ILevel, IEasy
+    public partial class EasyLvl : Window, ILevel, IEasy
     {
         System.Windows.Threading.DispatcherTimer dispatcherTimer;
         List<string> words = new List<string>();
         string playerInput = "";
-        public MainWindow()
+        string[] usersIndex;
+        public EasyLvl(int indexUser)
         {
             InitializeComponent();
             words.Add("not");
@@ -35,7 +37,8 @@ namespace LinkLettersGame
             words.Add("unto");
             words.Add("out");
             words.Add("ton");
-            
+            string[] sr = File.ReadAllLines("PlayerData.txt");
+            usersIndex = sr[indexUser].Split(',');
             timer();
         }
 
@@ -117,20 +120,22 @@ namespace LinkLettersGame
             }
         }
 
+        int points;
         public void removeWord()
         {
+            
             for (int i = 0; i < words.Count; i++)
             {
                 if (words[i] == playerInput.ToLower())
                 {
                     words.RemoveAt(i);
+                    points++;
+                    displayPoints.Content = points;
                     clearAll();
                 }
                 
             }
                     
-                
-
         }
 
         public void timer()
@@ -186,6 +191,17 @@ namespace LinkLettersGame
             untoO.Foreground = new SolidColorBrush(Colors.Black);
         }
 
+        public void setPlayerScore()
+        {
+            usersIndex[3] = "Easy";
+            usersIndex[4] = displayPoints.Content.ToString();
+            usersIndex[5] = timerLabel.Content.ToString();
+            usersIndex[6] += 1;
+            Player pl = new Player(usersIndex[0], usersIndex[1], usersIndex[2], usersIndex[3], int.Parse(usersIndex[4]) , int.Parse(usersIndex[5]), int.Parse(usersIndex[6]));
+            pl.saveData();
+        }
+
+
         public void clearAll()
         {
             inputLable.Content = "";
@@ -195,7 +211,8 @@ namespace LinkLettersGame
         public void gameOver()
         {
             dispatcherTimer.Stop();
-            System.Windows.MessageBox.Show("Game Over " + "\n" + "");
+            setPlayerScore();
+            System.Windows.MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel.Content.ToString());
         }
     }
 }
