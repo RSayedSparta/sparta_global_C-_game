@@ -19,6 +19,7 @@ namespace LinkLettersGame
     /// </summary>
     public partial class LogIn : Window
     {
+        Player pl;
         public LogIn()
         {
             InitializeComponent();
@@ -33,9 +34,20 @@ namespace LinkLettersGame
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            Home hm = new Home();
+
+            Home hm = new Home(this);
             hm.Show();
             this.Close();
+        }
+
+        private void UserLogin_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        public void checkLoginDetails()
+        {
+
         }
     }
 }

@@ -15,9 +15,9 @@
         <Label Content="Password Confirmation" HorizontalAlignment="Left" Margin="225,250,0,0" VerticalAlignment="Top"/>
         <PasswordBox x:Name="passSignup" HorizontalAlignment="Left" Margin="229,197,0,0" VerticalAlignment="Top" Width="120" Height="24"/>
         <PasswordBox x:Name="repassSignup" HorizontalAlignment="Left" Margin="229,280,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
-        <Image HorizontalAlignment="Left" Height="147" Margin="475,117,0,0" VerticalAlignment="Top" Width="186"/>
+        <Image x:Name="displayPic" HorizontalAlignment="Left" Height="147" Margin="475,117,0,0" VerticalAlignment="Top" Width="186"/>
         <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="selectPic" Content="Choose Icon" HorizontalAlignment="Left" Margin="475,288,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="selectPic" Content="Choose Icon" HorizontalAlignment="Left" Margin="475,288,0,0" VerticalAlignment="Top" Width="75" Click="SelectPic_Click"/>
 
     </Grid>
 </Window>

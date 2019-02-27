@@ -19,7 +19,7 @@ namespace LinkLettersGame
     /// </summary>
     public partial class Home : Window
     {
-        public Home()
+        public Home(LogIn logIn)
         {
             InitializeComponent();
         }

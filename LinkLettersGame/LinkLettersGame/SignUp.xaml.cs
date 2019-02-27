@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace LinkLettersGame
     public partial class SignUp : Window
     {
         Player newPlayer;
+        LogIn win = new LogIn();
         public SignUp()
         {
             InitializeComponent();
@@ -28,7 +30,6 @@ namespace LinkLettersGame
 
         private void LoginPage_Click(object sender, RoutedEventArgs e)
         {
-            LogIn win = new LogIn();
             win.Show();
             this.Close();
         }
@@ -37,14 +38,19 @@ namespace LinkLettersGame
         {
             string un = checkPassword();
             string pass = checkPassword();
-            string path = "";
+            string path = displayPic.Source.ToString();
 
             if (un != "" && pass != "" && path != "")
             {
                 newPlayer = new Player(un, pass, path);
                 newPlayer.saveData();
-                LogIn li = new LogIn();
+                MessageBox.Show("You have successfully registered");
+                win.Show();
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please enter all fields");
             }
             
         }
@@ -67,7 +73,7 @@ namespace LinkLettersGame
         public string checkUsername()
         {
             string username = userSignup.Text;
-            string[] sr = File.ReadAllLines("UserData.txt");
+            string[] sr = File.ReadAllLines("PlayerData.txt");
             for (int i = 0; i < sr.Length; i++)
             {
                 string[] str = sr[i].Split(',');
@@ -83,6 +89,17 @@ namespace LinkLettersGame
         private void UserSignup_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void SelectPic_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Please select an image from your computer";
+            ofd.Filter = "All Support image image|*.jpeg;*.jpg;*.png";
+            if (ofd.ShowDialog() == true)
+            {
+                displayPic.Source = new BitmapImage(new Uri(ofd.FileName));
+            }
         }
     }
 }

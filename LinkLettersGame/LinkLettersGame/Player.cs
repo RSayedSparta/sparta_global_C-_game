@@ -39,7 +39,7 @@ namespace LinkLettersGame
 
         public void saveData()
         {
-            using (StreamWriter sw = File.AppendText("UserData.csv"))
+            using (StreamWriter sw = File.AppendText("PlayerData.txt"))
             {
                 sw.WriteLine(name + "," + password + "," + picturePath + "," + level + "," + score + "," + time + "," + attempt);
             }
