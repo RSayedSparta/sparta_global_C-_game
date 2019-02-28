@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Timers;
-using System.Media;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Windows.Threading;
@@ -21,9 +18,9 @@ using System.IO;
 namespace LinkLettersGame
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EasyLvl.xaml
     /// </summary>
-    
+
     public partial class EasyLvl : Window, ILevel, IEasy
     {
         List<string> words = new List<string>();
@@ -133,9 +130,7 @@ namespace LinkLettersGame
         int points;
         public void removeWord()
         {
-            Sound1 = new MediaPlayer();
-            Sound1.Open(new Uri(@"C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\check.wav"));
-            Sound1.Play();
+            
             for (int i = 0; i < words.Count; i++)
             {
                 if (words[i] == playerInput.ToLower())
@@ -143,6 +138,9 @@ namespace LinkLettersGame
                     words.RemoveAt(i);
                     points++;
                     displayPoints.Content = points;
+                    Sound1 = new MediaPlayer();
+                    Sound1.Open(new Uri(@"C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\check.wav"));
+                    Sound1.Play();
                     clearAll();
                 }
                 
@@ -156,7 +154,6 @@ namespace LinkLettersGame
             dispatcherTimer.Interval = TimeSpan.FromSeconds(1);
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             
-
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
@@ -226,7 +223,7 @@ namespace LinkLettersGame
             dispatcherTimer.Stop();
             setPlayerScore();
             Sound2 = new MediaPlayer();
-            Sound2.Open(new Uri(@"C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\clap.wav"));
+            Sound2.Open(new Uri(@"C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\clap.wav"));
             Sound2.Play();
             System.Windows.MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel.Content.ToString());
             this.Close();

@@ -21,7 +21,6 @@ C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLetter
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Home.g.cs
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LeaderPage.g.cs
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LogIn.g.cs
-C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\MainWindow.g.cs
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Medium.g.cs
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\SignUp.g.cs
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\App.g.cs
@@ -31,7 +30,6 @@ C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLetter
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Home.baml
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LeaderPage.baml
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LogIn.baml
-C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\MainWindow.baml
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Medium.baml
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\SignUp.baml
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.g.resources
@@ -71,3 +69,9 @@ C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\Lin
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\WPF.Bootstrap.dll
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\App.baml
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csproj.CopyComplete
+C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Easy.baml
+C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Easy.g.cs
+C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame_Content.g.cs
+C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\WPF.Bootstrap.dll
+C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\App.baml
+C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csproj.CopyComplete

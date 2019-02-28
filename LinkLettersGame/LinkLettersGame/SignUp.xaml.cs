@@ -39,10 +39,12 @@ namespace LinkLettersGame
         {
             string un = checkUsername();
             string pass = checkPassword();
-            if (un != "" && pass != "")
+            string path = "";
+            path = checkPath(path);
+            if (un != "" && pass != "" && path != "")
             {
                 sb = new StringBuilder(displayPic.Source.ToString());
-                string path = sb.Remove(0, 8).ToString();
+                path = sb.Remove(0, 8).ToString();
                 newPlayer = new Player(un, pass, path);
                 newPlayer.saveData();
                 MessageBox.Show("You have successfully registered");
@@ -86,6 +88,17 @@ namespace LinkLettersGame
             }
             
             return username;
+        }
+
+        public string checkPath(string path)
+        {
+            
+            if (displayPic.Source != null)
+            {
+                path = displayPic.Source.ToString();
+                MessageBox.Show("Please select a picture");
+            }
+            return path;
         }
 
         private void UserSignup_TextChanged(object sender, TextChangedEventArgs e)

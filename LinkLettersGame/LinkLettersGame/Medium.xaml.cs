@@ -26,6 +26,8 @@ namespace LinkLettersGame
         string[] usersIndex;
         int seconds = -1;
         DispatcherTimer dispatcherTimer;
+        MediaPlayer Sound1;
+        MediaPlayer Sound2;
         public Medium(int indexUser)
         {
             InitializeComponent();
@@ -150,6 +152,7 @@ namespace LinkLettersGame
         int points;
         public void removeWord()
         {
+            
             for (int i = 0; i < words.Count; i++)
             {
                 if (words[i] == playerInput.ToLower())
@@ -157,6 +160,9 @@ namespace LinkLettersGame
                     words.RemoveAt(i);
                     points++;
                     displayPoints.Content = points;
+                    Sound1 = new MediaPlayer();
+                    Sound1.Open(new Uri(@"C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\check.wav"));
+                    Sound1.Play();
                     clearAll();
                 }
 
@@ -206,7 +212,11 @@ namespace LinkLettersGame
         {
             dispatcherTimer.Stop();
             setPlayerScore();
-            System.Windows.MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel.Content.ToString());
+            Sound2 = new MediaPlayer();
+            Sound2.Open(new Uri(@"C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\clap.wav"));
+            Sound2.Play();
+            MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel.Content.ToString());
+            this.Close();
         }
 
         private void BtnE_Click(object sender, RoutedEventArgs e)

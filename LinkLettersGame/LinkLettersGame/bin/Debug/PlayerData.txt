@@ -1,1 +1,5 @@
 Rahib,123,C:/Users/Tech-W70a/Pictures/sparta.png,,0,0,0
+jinswife,dicks,C:/Users/rahib/Pictures/enzyne.PNG,,0,0,0
+jinswife,dicks,C:/Users/rahib/Pictures/enzyne.PNG,Easy,5,20,1
+jinswife,dicks,C:/Users/rahib/Pictures/enzyne.PNG,Medium,7,28,1
+jinswife,dicks,C:/Users/rahib/Pictures/enzyne.PNG,Hard,12,97,1

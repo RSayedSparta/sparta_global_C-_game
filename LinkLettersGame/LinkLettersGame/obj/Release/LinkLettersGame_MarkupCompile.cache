@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\
+C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Release\
 LinkLettersGame
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\App.xaml
 7-728915401
 281650594688
@@ -16,5 +16,5 @@ C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLetter
 15-2015785994
 Hard.xaml;Home.xaml;LeaderPage.xaml;LogIn.xaml;Easy.xaml;Medium.xaml;SignUp.xaml;
 
-False
+True
 
