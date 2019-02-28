@@ -43,6 +43,7 @@ C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLetter
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\LinkLettersGame.exe.config
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\LinkLettersGame.exe
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\LinkLettersGame.pdb
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csprojAssemblyReference.cache
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Hard.g.cs
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\Home.g.cs
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LeaderPage.g.cs
@@ -66,4 +67,3 @@ C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\Lin
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csproj.CoreCompileInputs.cache
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.exe
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.pdb
-C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csprojAssemblyReference.cache

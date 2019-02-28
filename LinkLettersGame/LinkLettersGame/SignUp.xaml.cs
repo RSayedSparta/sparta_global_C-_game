@@ -66,6 +66,7 @@ namespace LinkLettersGame
             else
             {
                 MessageBox.Show("Please re-enter password correctly");
+                password = "";
             }
 
             return password;

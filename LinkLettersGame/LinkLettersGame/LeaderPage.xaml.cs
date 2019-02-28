@@ -33,9 +33,16 @@ namespace LinkLettersGame
             for (int i = 0; i < sr.Length; i++)
             {
                 string[] str = sr[i].Split(',');
-                if (str[3] != "")
+                if(str[5] != "0")
                 {
-                    displayInfo.Content = "\n" +str[0] + "           " + str[3] + "           " + str[4] + "           " + str[5] + "           " + str[6];
+                    displayInfo.Content +=  str[0] + "\n";
+
+                    displayInfoLvl.Content += str[3] + "\n";
+
+                    displayInfoPoints.Content += str[4] + "\n";
+
+                    displayInfoTime.Content += str[5] + "\n";
+
                 }
                 
             }
