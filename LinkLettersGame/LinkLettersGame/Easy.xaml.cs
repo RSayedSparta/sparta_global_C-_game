@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using System.Media;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -30,6 +31,8 @@ namespace LinkLettersGame
         string[] usersIndex;
         int seconds = -1;
         DispatcherTimer dispatcherTimer;
+        MediaPlayer Sound1;
+        MediaPlayer Sound2;
         public EasyLvl(int indexUser)
         {
             InitializeComponent();
@@ -39,14 +42,18 @@ namespace LinkLettersGame
             words.Add("out");
             words.Add("ton");
             
+
             string[] sr = File.ReadAllLines("PlayerData.txt");
             usersIndex = sr[indexUser].Split(',');
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Start();
+            
+            
         }
 
         public void selectLetter(RoutedEventArgs e)
         {
+            
             if (playerInput.Length < 5)
             {
                 System.Windows.Controls.Button letter = (System.Windows.Controls.Button)e.Source;
@@ -126,7 +133,9 @@ namespace LinkLettersGame
         int points;
         public void removeWord()
         {
-            
+            Sound1 = new MediaPlayer();
+            Sound1.Open(new Uri(@"C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\check.wav"));
+            Sound1.Play();
             for (int i = 0; i < words.Count; i++)
             {
                 if (words[i] == playerInput.ToLower())
@@ -216,6 +225,9 @@ namespace LinkLettersGame
         {
             dispatcherTimer.Stop();
             setPlayerScore();
+            Sound2 = new MediaPlayer();
+            Sound2.Open(new Uri(@"C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\clap.wav"));
+            Sound2.Play();
             System.Windows.MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel.Content.ToString());
             this.Close();
         }

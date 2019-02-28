@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LinkLettersGame"
         mc:Ignorable="d"
-        Title="Hard" Height="791.6" Width="1103.2" Loaded="Window_Loaded">
+        Title="Hard" Height="791.6" Width="1103.2" Loaded="Window_Loaded" Background="LavenderBlush">
     <Grid>
-        <Button x:Name="btnR" Content="R" HorizontalAlignment="Left" Margin="331,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnR_Click" FontSize="20"/>
-        <Button x:Name="btnS" Content="S" HorizontalAlignment="Left" Margin="446,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnS_Click" FontSize="20"/>
-        <Button x:Name="btnU" Content="U" HorizontalAlignment="Left" Margin="560,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnU_Click" FontSize="20"/>
-        <Button x:Name="btnE" Content="E" HorizontalAlignment="Left" Margin="675,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnE_Click" FontSize="20"/>
-        <Button x:Name="btnC" Content="C" HorizontalAlignment="Left" Margin="792,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnC_Click" FontSize="20"/>
-        <Button x:Name="btnEE" Content="E" HorizontalAlignment="Left" Margin="225,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnN_Click" FontSize="20"/>
+        <Button x:Name="btnR" Style="{StaticResource letterbtn}" Content="R" HorizontalAlignment="Left" Margin="331,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnR_Click" FontSize="20"/>
+        <Button x:Name="btnS" Style="{StaticResource letterbtn}" Content="S" HorizontalAlignment="Left" Margin="446,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnS_Click" FontSize="20"/>
+        <Button x:Name="btnU" Style="{StaticResource letterbtn}" Content="U" HorizontalAlignment="Left" Margin="560,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnU_Click" FontSize="20"/>
+        <Button x:Name="btnE" Style="{StaticResource letterbtn}" Content="E" HorizontalAlignment="Left" Margin="675,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnE_Click" FontSize="20"/>
+        <Button x:Name="btnC" Style="{StaticResource letterbtn}" Content="C" HorizontalAlignment="Left" Margin="792,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnC_Click" FontSize="20"/>
+        <Button x:Name="btnEE" Style="{StaticResource letterbtn}" Content="E" HorizontalAlignment="Left" Margin="225,641,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnN_Click" FontSize="20"/>
         <Label Content="Points:" HorizontalAlignment="Left" Margin="134,715,0,0" VerticalAlignment="Top"/>
         <Label x:Name="displayPoints" Content="" HorizontalAlignment="Left" Margin="184,715,0,0" VerticalAlignment="Top" Width="41"/>
-        <Label x:Name="timerLabel" Content="Timer  " HorizontalAlignment="Left" Margin="879,715,0,0" VerticalAlignment="Top"/>
+        <Label Content="Timer :" HorizontalAlignment="Left" Margin="879,715,0,0" VerticalAlignment="Top"/>
         <Label x:Name ="curseE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="225,422,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
         <Label x:Name ="curse_userS"  Foreground="Transparent" Content="S" HorizontalAlignment="Left" Margin="225,369,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
         <Label x:Name ="curseR"  Foreground="Transparent" Content="R" HorizontalAlignment="Left" Margin="225,316,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
@@ -55,8 +55,9 @@
         <Label x:Name ="secureR"  Foreground="Transparent" Content="R" HorizontalAlignment="Left" Margin="765,50,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
         <Label x:Name ="secureEE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="825,50,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
         <Label x:Name ="use_sureE"  Foreground="Transparent" Content="E" HorizontalAlignment="Left" Margin="465,422,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
-        <Label x:Name="inputLable" Content="" HorizontalAlignment="Left" Margin="331,560,0,0" VerticalAlignment="Top" Height="47" Width="397" FontWeight="Bold" FontSize="20" Background="Red"/>
-        <Button x:Name="clearBtn" Content="Clear" HorizontalAlignment="Left" Margin="902,560,0,0" VerticalAlignment="Top" Width="83" Height="36" FontSize="18" Click="ClearBtn_Click"/>
+        <Label x:Name="inputLable" Content="" HorizontalAlignment="Left" Margin="331,560,0,0" VerticalAlignment="Top" Height="47" Width="397" FontWeight="Bold" FontSize="20" Background="White"/>
+        <Button x:Name="clearBtn" Style="{StaticResource letterbtn}" Content="Clear" HorizontalAlignment="Left" Margin="902,560,0,0" VerticalAlignment="Top" Width="83" Height="36" FontSize="18" Click="ClearBtn_Click"/>
+        <Label x:Name="timerLabel1" Content="" HorizontalAlignment="Left" Margin="925,715,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

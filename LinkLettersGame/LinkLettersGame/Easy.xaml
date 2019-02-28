@@ -2,11 +2,11 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LinkLettersGame"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         mc:Ignorable="d"
-        Title="Link Letters" Height="687.609" Width="853.734" Loaded="Window_Loaded">
+        Title="Link Letters" Height="687.609" Width="853.734" Loaded="Window_Loaded" Background="LavenderBlush">
     <Grid Margin="0,0,3.4,-0.6">
+        
         <Label Name ="outU" Foreground="Transparent" Content="U" HorizontalAlignment="Left" Margin="504,233,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red"  ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
         <Label Name ="ton_outO" Foreground="Transparent" Content="O" HorizontalAlignment="Left" Margin="395,233,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
         <Label Name ="ton_notT" Foreground="Transparent" Content="T" HorizontalAlignment="Left" Margin="395,157,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
@@ -19,15 +19,19 @@
         <Label Name="not_nutN" Foreground="Transparent" Content="N"  HorizontalAlignment="Left" Margin="170,157,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
         <Label Name ="nutU" Foreground="Transparent"  Content="U" HorizontalAlignment="Left" Margin="170,233,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
         <Label Name ="nutT"  Foreground="Transparent" Content="T" HorizontalAlignment="Left" Margin="170,308,0,0" VerticalAlignment="Top" Height="48" Width="55" FontWeight="Bold" FontSize="20" Background="Red" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Segoe UI"/>
-        <Button x:Name="btnN" Content="N" HorizontalAlignment="Left" Margin="232,488,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnN_Click" FontSize="20"/>
-        <Button x:Name="btnU" Content="U" HorizontalAlignment="Left" Margin="335,488,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnU_Click" FontSize="20"/>
-        <Button x:Name="btnO" Content="O" HorizontalAlignment="Left" Margin="436,488,0,0" VerticalAlignment="Top" Width="56" Height="54" Click="BtnO_Click" FontSize="20"/>
-        <Button x:Name="btnT" Content="T" HorizontalAlignment="Left" Margin="532,488,0,0" VerticalAlignment="Top" Width="58" Height="54" Click="BtnT_Click" FontSize="20"/>
-        <Label x:Name="inputLable" Content="" HorizontalAlignment="Left" Margin="226,398,0,0" VerticalAlignment="Top" Height="47" Width="397" FontWeight="Bold" FontSize="20" Background="Red"/>
+        <Button x:Name="btnN" Style="{StaticResource letterbtn}" Content="N" HorizontalAlignment="Left" Margin="232,488,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnN_Click" FontSize="20"/>
+        <Button x:Name="btnU" Style="{StaticResource letterbtn}" Content="U" HorizontalAlignment="Left" Margin="335,488,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="BtnU_Click" FontSize="20"/>
+        <Button x:Name="btnO" Style="{StaticResource letterbtn}" Content="O" HorizontalAlignment="Left" Margin="436,488,0,0" VerticalAlignment="Top" Width="56" Height="54" Click="BtnO_Click" FontSize="20"/>
+        <Button x:Name="btnT" Style="{StaticResource letterbtn}" Content="T" HorizontalAlignment="Left" Margin="532,488,0,0" VerticalAlignment="Top" Width="58" Height="54" Click="BtnT_Click" FontSize="20"/>
+        <Label x:Name="inputLable" Content="" HorizontalAlignment="Left" Margin="226,398,0,0" VerticalAlignment="Top" Height="47" Width="397" FontWeight="Bold" FontSize="20" Background="White"/>
         <Button x:Name="clearBtn" Content="Clear" HorizontalAlignment="Left" Margin="667,431,0,0" VerticalAlignment="Top" Width="83" Height="36" FontSize="18" Click="ClearBtn_Click"/>
-        <Label x:Name="timerLabel" Content="Timer  " HorizontalAlignment="Left" Margin="613,591,0,0" VerticalAlignment="Top"/>
+        <Label Content="Timer :" HorizontalAlignment="Left" Margin="613,591,0,0" VerticalAlignment="Top"/>
         <Label Content="Points:" HorizontalAlignment="Left" Margin="134,591,0,0" VerticalAlignment="Top"/>
         <Label x:Name="displayPoints" Content="" HorizontalAlignment="Left" Margin="184,591,0,0" VerticalAlignment="Top" Width="41"/>
-
+        <Label x:Name="timerLabel" Content="" HorizontalAlignment="Left" Margin="659,591,0,0" VerticalAlignment="Top"/>
     </Grid>
+    
+    
+    
 </Window>
+    

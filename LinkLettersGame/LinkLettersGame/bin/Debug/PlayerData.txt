@@ -1,6 +1,1 @@
 Rahib,123,C:/Users/Tech-W70a/Pictures/sparta.png,,0,0,0
-Rahib,123,C:/Users/Tech-W70a/Pictures/sparta.png,Easy,5,25,1
-Rahib,123,C:/Users/Tech-W70a/Pictures/sparta.png,Medium,7,30,1
-Rahib,123,C:/Users/Tech-W70a/Pictures/sparta.png,Hard,12,258,1
-Sayed,123,C:/Users/Tech-W70a/Pictures/sparta.png,,0,0,0
-Sayed,123,C:/Users/Tech-W70a/Pictures/sparta.png,Medium,7,41,1

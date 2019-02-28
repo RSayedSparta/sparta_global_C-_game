@@ -67,3 +67,7 @@ C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\Lin
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csproj.CoreCompileInputs.cache
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.exe
 C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.pdb
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame_Content.g.cs
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\WPF.Bootstrap.dll
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\App.baml
+C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\obj\Debug\LinkLettersGame.csproj.CopyComplete

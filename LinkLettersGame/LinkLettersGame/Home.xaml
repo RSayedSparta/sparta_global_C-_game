@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LinkLettersGame"
         mc:Ignorable="d"
-        Title="Home" Height="450" Width="800">
+        Title="Home" Height="450" Width="800" Background="LavenderBlush">
     <Grid>
         <Image x:Name="avatarPic" HorizontalAlignment="Left" Height="241" Margin="50,51,0,0" VerticalAlignment="Top" Width="249"/>
         <Label x:Name="userLable" Content="Username" HorizontalAlignment="Left" Margin="82,344,0,0" VerticalAlignment="Top"/>
