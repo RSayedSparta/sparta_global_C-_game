@@ -27,6 +27,8 @@ namespace LinkLettersGame
         public SignUp()
         {
             InitializeComponent();
+
+            
         }
 
         private void LoginPage_Click(object sender, RoutedEventArgs e)

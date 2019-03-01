@@ -161,7 +161,7 @@ namespace LinkLettersGame
                     points++;
                     displayPoints.Content = points;
                     Sound1 = new MediaPlayer();
-                    Sound1.Open(new Uri(@"C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\check.wav"));
+                    Sound1.Open(new Uri(@"C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\check.wav"));
                     Sound1.Play();
                     clearAll();
                 }
@@ -213,33 +213,13 @@ namespace LinkLettersGame
             dispatcherTimer.Stop();
             setPlayerScore();
             Sound2 = new MediaPlayer();
-            Sound2.Open(new Uri(@"C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\clap.wav"));
+            Sound2.Open(new Uri(@"C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\clap.wav"));
             Sound2.Play();
             MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel.Content.ToString());
             this.Close();
         }
 
-        private void BtnE_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
-
-        private void BtnH_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
-
-        private void BtnEE_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
-
-        private void BtnR_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
-
-        private void BtnT_Click(object sender, RoutedEventArgs e)
+        private void Btn_Click(object sender, RoutedEventArgs e)
         {
             selectLetter(e);
         }

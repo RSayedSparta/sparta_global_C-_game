@@ -244,7 +244,7 @@ namespace LinkLettersGame
                     points++;
                     displayPoints.Content = points;
                     Sound1 = new MediaPlayer();
-                    Sound1.Open(new Uri(@"C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\check.wav"));
+                    Sound1.Open(new Uri(@"C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\check.wav"));
                     Sound1.Play();
                     clearAll();
                 }
@@ -266,35 +266,7 @@ namespace LinkLettersGame
             timerLabel1.Content = seconds;
         }
 
-        private void BtnN_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
 
-        private void BtnR_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
-
-        private void BtnS_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
-
-        private void BtnU_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
-
-        private void BtnE_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
-
-        private void BtnC_Click(object sender, RoutedEventArgs e)
-        {
-            selectLetter(e);
-        }
 
         public void setPlayerScore()
         {
@@ -311,7 +283,7 @@ namespace LinkLettersGame
             dispatcherTimer.Stop();
             setPlayerScore();
             Sound2 = new MediaPlayer();
-            Sound2.Open(new Uri(@"C:\Users\rahib\Documents\Sparta\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\clap.wav"));
+            Sound2.Open(new Uri(@"C:\Users\Tech-W70a\Engineering26\week7\sparta_global_C-_game\LinkLettersGame\LinkLettersGame\bin\Debug\Debug\clap.wav"));
             Sound2.Play();
             System.Windows.MessageBox.Show("Game Over " + "\n" + "Points: " + displayPoints.Content.ToString() + " Time: " + timerLabel1.Content.ToString());
             this.Close();
@@ -320,6 +292,11 @@ namespace LinkLettersGame
         private void ClearBtn_Click(object sender, RoutedEventArgs e)
         {
             clearAll();
+        }
+
+        private void Btn_Click(object sender, RoutedEventArgs e)
+        {
+            selectLetter(e);
         }
     }
 }
